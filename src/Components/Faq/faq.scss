@@ -1,0 +1,132 @@
+@import "../../breakpoints";
+
+
+.faq-section{
+    width: 100%;
+    
+    
+    // background-color: gray;
+    position: relative;
+
+    @include breakpoint-lg-inverse{
+        height: 60vh;
+    }
+    @include breakpoint-lg{
+        min-height: 60vh;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .faq-section-pic{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -20%;
+
+       
+
+        img{
+            height: 150%;
+            object-fit: contain;
+            object-position: left;
+            mix-blend-mode: color-burn;
+            top: 0;
+            position: absolute;
+
+            // background-color: red;
+
+            // below animation defined in app.scss file
+            // @keyframes imgAnimation {
+            //     from {
+            //       transform: rotate(0deg) scale(1.5) skew(-10deg, 0deg) scaleX(1);
+            //     }
+            //     to {
+            //       transform: rotate(0deg) scale(1) skew(10deg, 0deg) scaleX(1.2);
+            //     }
+            //   }
+
+            animation-name: imgAnimation;
+            animation-iteration-count: infinite;
+            animation-duration: 20s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+
+            
+        }
+
+       
+    }
+
+    .faq-wrapper{
+        position: relative;
+        width: 80%;
+        height: 100%;
+        // background-color: rgb(181, 95, 95);
+        margin: 0 auto;
+
+        display: flex;
+        // flex-direction: column;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint-lg{
+            flex-direction: column;
+            width: 90%;
+            
+        }
+
+        .faq-left{
+            width: 40%;
+            height: 100%;
+            // background-color: teal;
+            position: relative;
+            @include breakpoint-lg{
+                width: 80%;
+            }
+
+           
+
+            .faq-left-heading{
+                width: 100%;
+                height: 100%;
+                // background-color: blue;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                @include breakpoint-lg{
+                    justify-content: center;
+                }
+
+                h3{
+                    font-family: var(--primary-font);
+                    font-weight: 700;
+                    font-size: var(--font-size-lg);
+                    // background-color: red;
+                    padding: 0 5vw;
+                    @include breakpoint-lg{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .faq-right{
+            width: 60%;
+            height: 100%;
+
+            @include breakpoint-lg{
+                width: 100%;
+            }
+
+            
+            // background-color: teal;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

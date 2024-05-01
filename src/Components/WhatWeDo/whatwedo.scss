@@ -1,0 +1,55 @@
+@import "../../breakpoints";
+
+
+.whatwedo {
+  width: 100%;
+  min-height: 100vh;
+  // background-color: rgb(142, 142, 142);
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vw;
+
+  .whatwedo-wrapper {
+    // background-color: red;
+    width: 90%;
+    height: 100%;
+
+    h1{
+        font-size: var(--font-size-lg);
+        font-family: var(--primary-font);
+        font-weight: 700;
+        height: 10%;
+        // background-color: red;
+        margin-bottom: 1vw;
+    }
+
+    .whatwedo-grid {
+     
+      height: 90%;
+      // background-color: rebeccapurple;
+      
+
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+
+      @include breakpoint-sm-inverse{
+        
+        gap: 2vw;
+      }
+
+      @include breakpoint-lg{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include breakpoint-sm{
+        grid-template-rows: 1fr 1fr 3fr 1fr 1fr 3fr;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

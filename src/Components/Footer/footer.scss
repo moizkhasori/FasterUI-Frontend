@@ -1,0 +1,211 @@
+@import "../../breakpoints";
+
+.footer{
+    width: 100%;
+    height:80vh;
+    // background-color: rgb(229, 87, 87);
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+    position: relative;
+
+    .footer-img-div{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        img{
+            position: absolute;
+            width: 100%;
+            height: 200%;
+            bottom: 0%;
+            object-position: center;
+        }
+    }
+
+    .footer-wrapper{
+        width: 90%;
+        height: 80%;
+        position: relative;
+
+        @include breakpoint-sm{
+            height: 70%;
+        }
+        // background-color: gray;
+        background-color: white;
+        border-radius: 2vw;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+
+        padding: 4vw 3vw;
+
+       .footer-part1{
+        flex: 1;
+        width: 100%;
+        height: 10%;
+        // background-color: rebeccapurple;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5vw;
+
+        @include breakpoint-sm{
+            justify-content: center;
+        }
+
+        h3{
+            font-family: var(--primary-font);
+            font-size: 28px;
+            cursor: pointer;
+        }
+        img{
+            cursor: pointer;
+        }
+       }
+       .footer-part2{
+        // flex: 2;
+        width: 100%;
+        // background-color: red;
+        
+        @include breakpoint-sm-inverse{
+            height: 50%;
+        }
+        // background-color: yellow;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include breakpoint-sm{
+            flex-direction: column;
+            align-items: center;
+            // justify-content: space-around;
+            justify-content: center;
+            gap: 5vw;
+            padding: 2vw 0;
+        }
+
+        .footer-part2-p{
+            width: 20%;
+            // height: 40%;
+            // background-color: red;
+            @include breakpoint-lg{
+                width: 50%;
+            }
+            @include breakpoint-sm{
+                align-self: flex-start;
+                width: 80%;
+                margin: 0 auto;
+            }
+            p{
+                font-family: var(--secondary-font);
+                font-size: var(--font-size-sm);
+                line-height: 150%;
+                
+                @include breakpoint-sm{
+                    text-align: center;
+
+                }
+            }
+        }
+
+        .footer-part2-links{
+            width: 30%;
+            // height: 40%;
+            // background-color: yellowgreen;
+
+            @include breakpoint-lg{
+                width: 50%;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 1vw;
+            }
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            @include breakpoint-sm{
+                align-items: center;
+            }
+            a{
+                font-family: var(--secondary-font);
+                font-size: var(--font-size-sm);
+                text-decoration: none;
+                color: var(--gray-black);
+
+                transition: color ease 0.3s;
+
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+       }
+       .footer-part3{
+        
+        width: 100%;
+        flex: 1;
+        
+        // background-color: green;
+
+        @include breakpoint-sm-inverse{
+            flex: 1;
+            height: 30%;
+            
+        }
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2vw;
+
+        @include breakpoint-sm{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5vw;
+          
+            
+        }
+
+        .footer-part3-text{
+            display: flex;
+            align-items: center;
+            gap: 0.5vw;
+            h5{
+                font-family: var(--secondary-font);
+                font-size: var(--font-size-sm);
+                font-weight: 400;
+                color: var(--gray-black);
+            }
+        }
+
+        .footer-part3-links{
+            width: 20%;
+            display: flex;
+            justify-content: space-around;
+            // background-color: red;
+
+            @include breakpoint-lg{
+                width: 35%;
+                gap: 1vw;
+            }
+
+            @include breakpoint-sm{
+                // flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                gap: 4vw;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+       }
+    }
+}

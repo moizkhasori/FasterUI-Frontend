@@ -1,0 +1,52 @@
+// Extra Small (up to 576px)
+@mixin breakpoint-xs {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  
+  // Small (577px to 768px)
+  @mixin breakpoint-sm {
+    @media  (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @mixin breakpoint-sm-inverse {
+    @media  (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  // Medium (769px to 992px)
+  @mixin breakpoint-md {
+    @media  (max-width: 992px) {
+      @content;
+    }
+  }
+  
+  // Large (993px to 1200px)
+  @mixin breakpoint-lg {
+    @media  (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @mixin breakpoint-lg-inverse {
+    @media  (min-width: 1200px) {
+      @content;
+    }
+  }
+  
+  // Extra Large (above 1200px)
+  @mixin breakpoint-xl {
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+
+  @mixin breakpoint-belowfifteen {
+    @media  (max-width: 1550px) {
+      @content;
+    }
+  }

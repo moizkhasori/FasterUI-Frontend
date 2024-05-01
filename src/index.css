@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+
+  --primary-font: "Raleway", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-base: 18px;
+  --font-size-med: 30px;
+  --font-size-lm: 34px;
+  --font-size-lg: 60px;
+  --font-size-xl: 74px;
+
+  --frozen-gray : #F5F8FF;
+  --purple-blue : #4E47FF;
+  --blue-black : #252432;
+  --gray-black : #8987A1;
+  --gray-price : #F5F8FF;
+  --white : #fff;
+  --light-gray : #F5F8FF;
+  --logo-black : #000;
+
+
+
+
+  --background : var(--frozen-gray);
+
+  width: 100%;
+  background-color: var(--background);
+}
+
+@media screen and (max-width:1350px) {
+    body{
+      --font-size-xs: 14px;
+    --font-size-sm: 16px;
+    --font-size-base: 18px;
+    --font-size-med: 22px;
+    --font-size-lm: 28px;
+    --font-size-lg: 50px;
+    --font-size-xl: 64px; 
+    }
+}
+
+
+@media screen and (max-width:650px) {
+  body{
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-med: 20px;
+    --font-size-lm: 22px;
+    --font-size-lg: 28px;
+    --font-size-xl: 36px; 
+  }
+}
+
+span{
+  font-size: var(--font-size-sm);
+  font-family: var(--secondary-font);
+  line-height: 150%;
+}
+
+button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}

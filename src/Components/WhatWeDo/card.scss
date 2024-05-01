@@ -1,0 +1,210 @@
+@import "../../breakpoints";
+
+.grid-item {
+  border-radius: 1rem;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+
+  background-color: white;
+  // background-color: red;
+
+  .img-tag {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--light-gray);
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-content: start;
+
+    padding: 1rem;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  h3 {
+    font-family: var(--secondary-font);
+    font-size: var(--font-size-base);
+  }
+
+  p {
+    font-family: var(--secondary-font);
+    line-height: 150%;
+    color: var(--gray-black);
+    font-size: var(--font-size-sm);
+  }
+
+  @include breakpoint-sm {
+    margin-bottom: 4vw;
+  }
+}
+
+#grid-1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#grid-2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  @include breakpoint-sm {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+#grid-3 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  @include breakpoint-lg {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  @include breakpoint-sm {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+}
+
+#grid-6 {
+  @include breakpoint-lg {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  @include breakpoint-sm {
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+}
+
+#grid-4 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  flex-direction: column;
+
+  .large-card-left {
+    width: 100%;
+    height: 50%;
+  }
+  .large-card-right {
+    width: 100%;
+    height: 50%;
+  }
+
+  @include breakpoint-lg {
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    flex-direction: row;
+
+    .large-card-left {
+      width: 60%;
+      height: 100%;
+    }
+    .large-card-right {
+      width: 40%;
+      height: 100%;
+    }
+  }
+
+  @include breakpoint-sm {
+    grid-row-start: 3;
+    grid-row-end: 3;
+
+    flex-direction: column;
+    // background-color: red;
+
+    .large-card-left {
+      width: 100%;
+      height: 50%;
+    }
+    .large-card-right {
+      width: 100%;
+      height: 50%;
+    }
+  }
+}
+
+#grid-5 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  flex-direction: row;
+
+  @include breakpoint-sm {
+    grid-row-start: 6;
+    grid-row-end: 7;
+
+    flex-direction: column;
+
+    .large-card-left {
+      width: 100%;
+      height: 50%;
+    }
+    .large-card-right {
+      width: 100%;
+      height: 50%;
+    }
+  }
+}
+
+.large-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  // background-color: red;
+
+  .large-card-left {
+    width: 60%;
+    height: 100%;
+    // background-color: blue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    // background-color: yellow;
+  }
+  .large-card-right {
+    height: 100%;
+    width: 40%;
+    // background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint-sm {
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1vw;
+      }
+    }
+
+    @include breakpoint-lg-inverse {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
